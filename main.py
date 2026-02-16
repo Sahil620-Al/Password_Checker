@@ -41,15 +41,15 @@ def check_strength(password):
 
     # Common password check
     if password.lower() in common_passwords:
-        return "Very Weak ❌", ["This is a very common password"]
+        return "Very Weak !", ["This is a very common password"]
 
     # Strength rating
     if score <= 2:
-        return "Weak ❌", remarks
+        return "Weak !", remarks
     elif score == 3 or score == 4:
-        return "Medium ⚠️", remarks
+        return "Medium !", remarks
     else:
-        return "Strong ✅", ["Good password 👍"]
+        return "Strong ..", ["Good password "]
 
 # Generate strong password
 def generate_password():
